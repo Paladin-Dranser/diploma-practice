@@ -1,10 +1,15 @@
 #!/bin/python3
 
-from deviceSetup import DeviceSetup
+import time
 
-csr = DeviceSetup('172.31.1.10', 'dranser', 'cisco')
-#interfaces = csr.get_interfaces()
-#for interface in interfaces:
-#    print(interface, csr.get_interface_txload(interface))
+from recalculation import Recalculation
+from router import Router
 
-csr.restart_eigrp()
+
+csr = Router('172.31.1.10', 'dranser', 'cisco')
+routers = [csr]
+recalculation = Recalculation(0.8, 10)
+
+while True:
+    recalculation.recalculate(routers)
+    time.sleep(Recalculation.TIMEOUT)
