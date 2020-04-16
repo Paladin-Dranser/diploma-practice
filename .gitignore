@@ -1,1 +1,6 @@
 __pycache__/
+*.log
+*.aux
+*.out
+*.toc
+report.pdf
