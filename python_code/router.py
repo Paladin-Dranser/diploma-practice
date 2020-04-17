@@ -30,8 +30,7 @@ class Router:
         return self.interfaces
 
     def get_interface_names(self):
-        url = "https://{h}/restconf/data/ietf-interfaces:interfaces/interface?fields=name"
-        .format(h=self.host)
+        url = "https://{h}/restconf/data/ietf-interfaces:interfaces/interface?fields=name".format(h=self.host)
 
         headers = {'Content-Type': 'application/yang-data+json',
                    'Accept': 'application/yang-data+json'}
@@ -48,9 +47,7 @@ class Router:
         ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
         ssh.connect(self.host, 22, self.username, self.password, look_for_keys=False)
 
-        stdin, stdout, stderr = ssh.exec_command(
-            'show interfaces {interface_name} | include load'.
-            format(interface_name=interface_name))
+        stdin, stdout, stderr = ssh.exec_command('show interfaces {interface_name} | include load'.format(interface_name=interface_name))
         output = stdout.readlines()
 
         ssh.close()
@@ -62,9 +59,7 @@ class Router:
         self._enable_eigrp()
 
     def _enable_eigrp(self):
-        url = "https://{host}/restconf/data/
-            Cisco-IOS-XE-native:native/router/router-eigrp/eigrp/
-            classic-mode=1?fields=shutdown".format(host=self.host)
+        url = "https://{host}/restconf/data/Cisco-IOS-XE-native:native/router/router-eigrp/eigrp/classic-mode=1?fields=shutdown".format(host=self.host)
 
         headers = {'Content-Type': 'application/yang-data+json'}
 
@@ -83,9 +78,7 @@ class Router:
                        verify=False)
 
     def _disable_eigrp(self):
-        url = "https://{host}/restconf/data/
-        Cisco-IOS-XE-native:native/router/router-eigrp/
-        eigrp/classic-mode=1?fields=shutdown".format(host=self.host)
+        url = "https://{host}/restconf/data/Cisco-IOS-XE-native:native/router/router-eigrp/eigrp/classic-mode=1?fields=shutdown".format(host=self.host)
 
         headers = {'Content-Type': 'application/yang-data+json'}
 

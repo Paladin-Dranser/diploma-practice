@@ -190,6 +190,12 @@ Python абумоўлены яго шматплатформеннасцю, а т
     роўным txload.
 \end{enumerate}
 
+У лістынгу \ref{lst: interface} прадстаўлены зыходны код Interface класа.
+
+\lstinputlisting[caption={Зыходны код Interface класа},%
+                            label={lst: interface},%
+                            language=Python]{interface.py}
+
 \subsubsection{Апісанне класа Router.}
 
 Дадзены клас змяшчае ўсю неабходную інфармацыю пра маршрутызатар і рэалізуе
@@ -215,6 +221,12 @@ Python абумоўлены яго шматплатформеннасцю, а т
     \item \_enable\_eigrp() --- уключае eigrp пратакол.
 \end{enumerate}
 
+У лістынгу \ref{lst: router} прадстаўлены зыходны код Router класа.
+
+\lstinputlisting[caption={Зыходны код Router класа},%
+                            label={lst: router},%
+                            language=Python]{router.py}
+
 \subsubsection{Апісанне класа Recalculation.}
 
 Дадзены клас адказвае за работу праграмы па адсочванні і пералічэнні нагрузкі на
@@ -232,3 +244,17 @@ Python абумоўлены яго шматплатформеннасцю, а т
 \begin{enumerate}
     \item recalculation(routers) --- выконвае маніторынг і пералік нагрузкі для маршрутызатараў, інфармацыя пра якіх была перададзена ў метад.
 \end{enumerate}
+
+У лістынгу \ref{lst: recalculation} прадстаўлены зыходны код Recalculation класа.
+
+\lstinputlisting[caption={Зыходны код Recalculation класа},%
+                            label={lst: recalculation},%
+                            language=Python]{recalculation.py}
+
+У лістынгу  \ref{lst: main} прадстаўлены прыклад запуску праграмы для адсочвання
+нагрузкі і пералічэння сеткавай тапалогіі для 1 маршрутызатар.
+
+\lstinputlisting[caption={Зыходны код галоўнай праграмы для 1 маршрутызатара},%
+                            label={lst: main},%
+                            language=Python]{main.py}
+
