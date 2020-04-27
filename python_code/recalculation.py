@@ -3,8 +3,6 @@ import threading
 import time
 from router import Router
 
-logging.basicConfig(level=logging.INFO)
-
 class Recalculation(threading.Thread):
     TIMEOUT = 5
 
@@ -32,8 +30,8 @@ class Recalculation(threading.Thread):
                         logging.critical('Old Load: {old_load}; New Load: {new_load}'.format(old_load=old_txload, new_load=current_txload))
                         break
                     else:
-                        logging.info('Load change on {interface_name} is less than threshold'.format(interface_name=name))
-                        logging.info('New Load: {new_load}; Old Load: {old_load}'.format(new_load=new_txload, old_load=old_txload))
+                        print('Load change on {interface_name} is less than threshold'.format(interface_name=name))
+                        print('New Load: {new_load}; Old Load: {old_load}'.format(new_load=new_txload, old_load=old_txload))
                 time.sleep(Recalculation.TIMEOUT)
             except:
                 logging.error('Router ({host}) is not found'.format(host=self.router.get_host()))
