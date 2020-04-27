@@ -3,6 +3,7 @@ import threading
 import time
 from router import Router
 
+logging.basicConfig(level=logging.INFO)
 
 class Recalculation(threading.Thread):
     TIMEOUT = 5
