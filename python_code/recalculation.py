@@ -36,3 +36,4 @@ class Recalculation(threading.Thread):
                 time.sleep(Recalculation.TIMEOUT)
             except:
                 logging.error('Router ({host}) is not found'.format(host=self.router.get_host()))
+                break
