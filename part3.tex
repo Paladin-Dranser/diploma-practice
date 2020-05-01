@@ -80,3 +80,48 @@ Successor-а пры яго наяўнасці.
 У той жа час для 10.10.33.0/24 даступны толькі 1 Successor, хаця дадзеная
 сетка можа быць дасягнута праз 2 маршрутызатары (via 10.10.22.22 і via 192.168.254.2).
 
+
+\subsubsection{Маршрутызатар R2.}
+
+У лістынгу \ref{lst: R2 before/interfaces} прадстаўлена кароткае апісанне ўключаных інтэрфейсаў на маршрутызатары R2.
+
+\lstinputlisting[caption={Уключаныя інтэрфейсы на маршрутызатары R2},%
+                            label={lst: R2 before/interfaces},%
+                            language=bash]{R2/before/interfaces.txt}
+
+У лістынгу \ref{lst: R2 before/routes} прадстаўлены ўсе даступныя EIGRP маршруты на маршрутызатары R2.
+
+
+\lstinputlisting[caption={EIGRP маршруты на маршрутызатары R2},%
+                            label={lst: R2 before/routes},%
+                            language=bash]{R2/before/routes.txt}
+
+Можам бачыць, што дадзены маршрутызатар атрымаў 2 EIGRP маршруты ад суседзяў: у сетку 172.31.1.0/24 і 192.168.254.0/24.
+
+У лістынгу \ref{lst: R2 before/topology} прадстаўлена EIGRP тапалогія сеткі на маршрутызатары R2.
+
+\lstinputlisting[caption={EIGRP тапалогія сеткі на маршрутызатары R2},%
+                            label={lst: R2 before/topology},%
+                            language=bash]{R2/before/topology.txt}
+
+\subsubsection{Маршрутызатар R3.}
+
+У лістынгу \ref{lst: R3 before/interfaces} прадстаўлена кароткае апісанне ўключаных інтэрфейсаў на маршрутызатары R3.
+
+\lstinputlisting[caption={Уключаныя інтэрфейсы на маршрутызатары R3},%
+                            label={lst: R3 before/interfaces},%
+                            language=bash]{R3/before/interfaces.txt}
+
+У лістынгу \ref{lst: R3 before/routes} прадстаўлены ўсе даступныя EIGRP маршруты на маршрутызатары R3.
+
+\lstinputlisting[caption={EIGRP маршруты на маршрутызатары R3},%
+                            label={lst: R3 before/routes},%
+                            language=bash]{R3/before/routes.txt}
+
+У лістынгу \ref{lst: R3 before/topology} прадстаўлена EIGRP тапалогія сеткі на маршрутызатары R3.
+
+\lstinputlisting[caption={EIGRP тапалогія сеткі на маршрутызатары R3},%
+                            label={lst: R3 before/topology},%
+                            language=bash]{R3/before/topology.txt}
+
+\subsection{Работа алгарытму пры перадачы трафіка}
