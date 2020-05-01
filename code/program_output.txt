@@ -1,0 +1,26 @@
+$ python3 main.py 
+Load change on GigabitEthernet1 is less than threshold
+New Load: 1; Old Load: 1
+Load change on GigabitEthernet2 is less than threshold
+New Load: 1; Old Load: 1
+Load change on GigabitEthernet3 is less than threshold
+New Load: 1; Old Load: 1
+...
+Load change on GigabitEthernet1 is less than threshold
+New Load: 1; Old Load: 1
+Load change on GigabitEthernet2 is less than threshold
+New Load: 1; Old Load: 1
+Load change on GigabitEthernet3 is less than threshold
+New Load: 11; Old Load: 1
+Load change on GigabitEthernet1 is less than threshold
+New Load: 1; Old Load: 1
+Load change on GigabitEthernet2 is less than threshold
+New Load: 1; Old Load: 1
+CRITICAL:root:Metric is recalculated for router: 172.31.1.10
+CRITICAL:root:Old Load: 1; New Load: 54
+Load change on GigabitEthernet1 is less than threshold
+New Load: 1; Old Load: 1
+Load change on GigabitEthernet2 is less than threshold
+New Load: 1; Old Load: 1
+Load change on GigabitEthernet3 is less than threshold
+New Load: 55; Old Load: 54
