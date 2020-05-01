@@ -1,0 +1,6 @@
+R1#show ip route eigrp 
+      10.0.0.0/8 is variably subnetted, 4 subnets, 2 masks
+D        10.10.11.0/24 
+           [90/2595895] via 192.168.254.2, 00:00:56, GigabitEthernet2
+D        10.10.33.0/24 
+           [90/2701384] via 10.10.22.22, 00:00:56, GigabitEthernet3

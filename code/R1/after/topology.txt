@@ -1,0 +1,15 @@
+R1#show ip eigrp topology 
+P 10.10.22.0/24, 1 successors, FD is 2573120
+        via Connected, GigabitEthernet3
+        via 192.168.254.2 (2621495/308203), GigabitEthernet2
+P 172.31.1.0/24, 1 successors, FD is 2570374
+        via Connected, GigabitEthernet1
+P 192.168.254.0/24, 1 successors, FD is 2570295
+        via Connected, GigabitEthernet2
+        via 10.10.22.22 (2624584/308203), GigabitEthernet3
+P 10.10.33.0/24, 1 successors, FD is 2701384
+        via 10.10.22.22 (2701384/128257), GigabitEthernet3
+        via 192.168.254.2 (2723895/410603), GigabitEthernet2
+P 10.10.11.0/24, 1 successors, FD is 2595895
+        via 192.168.254.2 (2595895/282603), GigabitEthernet2
+        via 10.10.22.22 (2598984/282603), GigabitEthernet3

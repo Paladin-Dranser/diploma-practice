@@ -1,0 +1,5 @@
+R1#show ip int br
+Interface              IP-Address      OK? Method Status                Protocol
+GigabitEthernet1       172.31.1.10     YES NVRAM  up                    up
+GigabitEthernet2       192.168.254.1   YES NVRAM  up                    up
+GigabitEthernet3       10.10.22.11     YES NVRAM  up                    up

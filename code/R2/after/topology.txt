@@ -1,0 +1,11 @@
+R2#show ip eigrp topology 
+P 10.10.22.0/24, 1 successors, FD is 282603
+        via Connected, Ethernet0/1
+P 172.31.1.0/24, 1 successors, FD is 2595974
+        via 10.10.22.11 (2595974/2570374), Ethernet0/1
+P 192.168.254.0/24, 1 successors, FD is 308203
+        via 10.10.11.11 (308203/282603), Ethernet0/0
+P 10.10.33.0/24, 1 successors, FD is 128257
+        via Connected, Loopback1
+P 10.10.11.0/24, 1 successors, FD is 282603
+        via Connected, Ethernet0/0

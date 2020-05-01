@@ -1,0 +1,4 @@
+R2# show ip route eigrp 
+      172.31.0.0/24 is subnetted, 1 subnets
+D        172.31.1.0 [90/2595974] via 10.10.22.11, 00:02:26, Ethernet0/1
+D     192.168.254.0/24 [90/308203] via 10.10.11.11, 00:02:26, Ethernet0/0

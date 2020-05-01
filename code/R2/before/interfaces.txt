@@ -1,0 +1,6 @@
+R2#show ip int br
+Interface                  IP-Address      OK? Method Status                Protocol
+Ethernet0/0                10.10.11.22     YES NVRAM  up                    up      
+Ethernet0/1                10.10.22.22     YES NVRAM  up                    up 
+...
+Loopback1                  10.10.33.33     YES NVRAM  up                    up
