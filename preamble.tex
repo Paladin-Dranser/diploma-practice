@@ -153,6 +153,25 @@
     \addcontentsline{toc}{section}{#1}%
     \par
 }
+
+%%% Каманда для дадаткаў без нумарацыі
+\newcommand{\sectionAppendix}[2]%
+{%
+    \phantomsection%
+    \begin{center}%
+        \fontsize{14}{16}%
+        \selectfont%
+        \bfseries%
+        \MakeUppercase{#1}%
+        \normalsize
+        \\
+        \vspace{\baselineskip}
+        #2
+    \end{center}%
+    \addcontentsline{toc}{section}{#1 #2}%
+    \par
+}
+
 %%% Каманда для загалоўка без дабаўлення ў змест
 \newcommand{\sectionWithoutContent}[1]%
 {%

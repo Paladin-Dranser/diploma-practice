@@ -1,0 +1,189 @@
+Using 2579 out of 33554432 bytes
+!
+! Last configuration change at 19:27:17 UTC Wed Apr 15 2020
+!
+version 16.12
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service call-home
+platform qfp utilization monitor load 80
+no platform punt-keepalive disable-kernel-core
+platform console serial
+!
+hostname R1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+no logging console
+no logging monitor
+!
+no aaa new-model
+call-home
+ ! If contact email address in call-home is configured as sch-smart-licensing@cisco.com
+ ! the email address configured in Cisco Smart License Portal
+ ! will be used as contact email address to send SCH notificatio.
+ contact-email-addr sch-smart-licensing@cisco.com
+ profile "CiscoTAC-1"
+  active
+  destination transport-method http
+  no destination transport-method email
+!
+!
+!
+!
+!
+!
+!
+ip domain name essay.by
+!
+!
+!
+login on-success log
+!
+!
+!         
+!
+!
+!
+!
+subscriber templating
+! 
+! 
+! 
+! 
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!         
+!
+!
+!
+crypto pki trustpoint TP-self-signed-1751521838
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-1751521838
+ revocation-check none
+ rsakeypair TP-self-signed-1751521838
+!
+crypto pki trustpoint SLA-TrustPoint
+ enrollment pkcs12
+ revocation-check crl
+!
+!
+crypto pki certificate chain TP-self-signed-1751521838
+ certificate self-signed 01 nvram:IOS-Self-Sig#1.cer
+crypto pki certificate chain SLA-TrustPoint
+ certificate ca 01 nvram:CiscoLicensi#1CA.cer
+!
+license udi pid CSR1000V sn 915L25MI4CS
+diagnostic bootup level minimal
+memory free low-watermark processor 72406
+!         
+
+et-analytics
+!
+spanning-tree extend system-id
+!
+username dranser privilege 15 password 0 cisco
+!
+redundancy
+!
+!
+!
+!
+!
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!         
+!
+!
+!
+!
+! 
+! 
+!
+!
+interface GigabitEthernet1
+ bandwidth 1000
+ ip address 172.31.1.10 255.255.255.0
+ load-interval 30
+ negotiation auto
+ no mop enabled
+ no mop sysid
+!
+interface GigabitEthernet2
+ bandwidth 1000
+ ip address 192.168.254.1 255.255.255.0
+ negotiation auto
+ no mop enabled
+ no mop sysid
+!         
+interface GigabitEthernet3
+ bandwidth 1000
+ ip address 10.10.22.11 255.255.255.0
+ negotiation auto
+ no mop enabled
+ no mop sysid
+!
+!
+router eigrp 1
+ metric weights 0 1 1 1 0 0
+ default-metric 10 10 255 10 600
+ network 10.10.22.0 0.0.0.255
+ network 172.31.1.0 0.0.0.255
+ network 192.168.254.0
+!
+!
+virtual-service csr_mgmt
+ ip shared host-interface GigabitEthernet1
+!
+ip forward-protocol nd
+ip http server
+ip http authentication local
+ip http secure-server
+!
+!
+!
+!
+!
+!
+!
+!
+control-plane
+!
+!
+!
+!
+!
+!
+line con 0
+ stopbits 1
+line vty 0 4
+ login local
+ transport input ssh
+!
+!
+!         
+!
+!
+!
+restconf
+end
