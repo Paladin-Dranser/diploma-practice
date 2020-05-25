@@ -1,0 +1,32 @@
+curl -u ****:**** -k -i -X GET -H 'Content-Type: application/yang-data+json' \
+                                   -H 'Accept: application/yang-data+json' \
+     https://172.31.1.10/restconf/data/\
+     Cisco-IOS-XE-native:native/router/router-eigrp/eigrp/classic-mode=1/network
+
+Server: nginx
+Date: Mon, 25 May 2020 09:10:21 GMT
+Content-Type: application/yang-data+json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Cache-Control: private, no-cache, must-revalidate, proxy-revalidate
+Pragma: no-cache
+
+{
+  "Cisco-IOS-XE-eigrp:network": {
+    "address-wildcard": [
+      {
+        "ipv4-address": "10.10.22.0",
+        "wildcard": "0.0.0.255"
+      },
+      {
+        "ipv4-address": "172.31.1.0",
+        "wildcard": "0.0.0.255"
+      }
+    ],
+    "address": [
+      {
+        "ipv4-address": "192.168.254.0"
+      }
+    ]
+  }
+}
