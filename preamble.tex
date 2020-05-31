@@ -190,14 +190,18 @@
 %%% Дадатак И
     % старонка са зместам не нумаруецца
     \tocloftpagestyle{empty}
+
+    % адлегласць паміж нумарам раздзела і яго назвай
+    \cftsetindents{section}{0cm}{10pt}
+    % адлегласць паміж нумарам падраздзела і яго назвай
+    \cftsetindents{subsection}{1.25cm}{20pt}
+
     % адключэнне пераносу слоў
     \makeatletter
         \renewcommand{\@tocrmarg}{2.55em plus1fil}
     \makeatletter
     % шматкроп'е да нумару старонкі
     \cftsetpnumwidth{2ex}
-    % адлегласць паміж нумарам раздзела і яго назвай
-    \renewcommand{\cftsecnumwidth}{10pt}
     % шрыфт загалоўка раздзела
     \renewcommand{\cftsecfont}{\normalfont}
     % шрыфт нумара раздзела
@@ -206,9 +210,9 @@
     \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
     % адлегласць паміж загалоўкамі раздзелаў
     \renewcommand{\cftbeforesecskip}{0em}
-    % адлегласць паміж нумарам падраздзела і яго назвай
-    \renewcommand{\cftsubsecnumwidth}{20pt}
     % слова ЗМЕСТ пішацца вялікімі літарамі, паўтоўстым шрыфтам, па цэнтру
+
+
     \renewcommand{\cfttoctitlefont}{%
         \hfill%
         \fontsize{14}{14}%
