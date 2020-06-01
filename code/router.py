@@ -101,5 +101,3 @@ class Router:
                        auth=(self.username, self.password),
                        headers=headers,
                        verify=False)
-
-
