@@ -1,5 +1,7 @@
 #!/bin/python3
 
+import argparse
+
 from recalculation import Recalculation
 from router import Router
 
@@ -24,7 +26,7 @@ for address in args.router:
 
 recalculations = []
 for router in routers:
-    recalculations.append(Recalculation(router, args.coefficient, args.threshold))
+    recalculations.append(Recalculation(router, float(args.coefficient), int(args.threshold)))
 
 for thread in recalculations:
     thread.start()
